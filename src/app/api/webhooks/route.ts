@@ -31,7 +31,7 @@ export async function POST(req: Request) {
         orderId: null,
       };
 
-      if (!userId || orderId) {
+      if (!userId || !orderId) {
         throw new Error("Invalid request metadata");
       }
 
@@ -40,7 +40,7 @@ export async function POST(req: Request) {
 
       await db.order.update({
         where: {
-          id: orderId!,
+          id: orderId,
         },
         data: {
           isPaid: true,
