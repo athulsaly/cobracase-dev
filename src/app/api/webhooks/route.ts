@@ -72,7 +72,7 @@ export async function POST(req: Request) {
       });
 
       await resend.emails.send({
-        from: "CobraCase <sircodesalots@gmail.com>",
+        from: "CobraCase <sircodesalots@sirtriedcoding.com>",
         to: event.data.object.customer_details.email,
         subject: "Thanks for your order!",
         react: OrderRecievedEmail({

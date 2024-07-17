@@ -14,7 +14,7 @@ import {
   Text,
 } from "@react-email/components";
 
-const OrderRecievedEmail = ({
+const OrderReceivedEmail = ({
   shippingAddress,
   orderId,
   orderDate,
@@ -48,49 +48,49 @@ const OrderRecievedEmail = ({
               your package has been shipped. Delivery usually takes 2 days.
             </Text>
             <Text style={{ ...global.text, marginTop: 24 }}>
-              If you've any questions regarding your order please feel free to
+              If you've any questions regarding your order, please feel free to
               contact us with your order number and we're here to help.
             </Text>
-            <Hr style={global.hr} />
-            <Section style={global.defaultPadding}>
-              <Text style={addressTitle}>
-                Shipping to: {shippingAddress.name}
-              </Text>
-              <Text style={{ ...global.text, fontSize: 14 }}>
-                {shippingAddress.street}, {shippingAddress.city},{" "}
-                {shippingAddress.state} {shippingAddress.postalCode}
-              </Text>
-            </Section>
-            <Hr style={global.hr} />
-            <Section style={global.defaultPadding}>
-              <Row style={{ display: "inline-flex", marginBottom: 40 }}>
-                <Column style={{ width: 170 }}>
-                  <Text style={global.paragraphWithBold}>Order Number</Text>
-                  <Text style={track.number}>{orderId}</Text>
-                </Column>
-                <Column>
-                  <Text style={global.paragraphWithBold}>Order Date</Text>
-                  <Text style={track.number}>{orderDate}</Text>
-                </Column>
-              </Row>
-            </Section>
-            <Hr style={global.hr} />
+          </Section>
+          <Hr style={global.hr} />
+          <Section style={global.defaultPadding}>
+            <Text style={addressTitle}>
+              Shipping to: {shippingAddress.name}
+            </Text>
+            <Text style={{ ...global.text, fontSize: 14 }}>
+              {shippingAddress.street}, {shippingAddress.city},{" "}
+              {shippingAddress.state} {shippingAddress.postalCode}
+            </Text>
+          </Section>
+          <Hr style={global.hr} />
+          <Section style={global.defaultPadding}>
+            <Row style={{ display: "inline-flex gap-16", marginBottom: 40 }}>
+              <Column style={{ width: 170 }}>
+                <Text style={global.paragraphWithBold}>Order Number</Text>
+                <Text style={track.number}>{orderId}</Text>
+              </Column>
+              <Column style={{ marginLeft: 20 }}>
+                <Text style={global.paragraphWithBold}>Order Date</Text>
+                <Text style={track.number}>{orderDate}</Text>
+              </Column>
+            </Row>
+          </Section>
+          <Hr style={global.hr} />
 
-            <Section style={paddingY}>
-              <Row>
-                <Text
-                  style={{ ...footer.text, paddingTop: 30, paddingBottom: 30 }}
-                >
-                  Please contact us if you have any questions. (If you reply to
-                  this email, we won't be able to see it.)
-                </Text>
-              </Row>
-              <Row>
-                <Text style={footer.text}>
-                  &copy; CobraCase, Inc. All Rights Reserved.
-                </Text>
-              </Row>
-            </Section>
+          <Section style={paddingY}>
+            <Row>
+              <Text
+                style={{ ...footer.text, paddingTop: 30, paddingBottom: 30 }}
+              >
+                Please contact us if you have any questions. (If you reply to
+                this email, we won't be able to see it.)
+              </Text>
+            </Row>
+            <Row>
+              <Text style={footer.text}>
+                &copy; CobraCase, Inc. All Rights Reserved.
+              </Text>
+            </Row>
           </Section>
         </Container>
       </Body>
@@ -98,7 +98,7 @@ const OrderRecievedEmail = ({
   );
 };
 
-export default OrderRecievedEmail;
+export default OrderReceivedEmail;
 
 const paddingX = {
   paddingLeft: "40px",
